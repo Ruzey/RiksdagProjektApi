@@ -22,13 +22,7 @@ namespace ConsoleApp1
                 t = JsonSerializer.Deserialize<Temp>(result);
             }
 
-            foreach (var item in t.personlista.person)
-            {
-                Console.WriteLine("\nNamn: " + item.tilltalsnamn + " " + item.efternamn);
-                Console.WriteLine("Födelseår: " + item.fodd_ar);
-                Console.WriteLine("Parti: " + item.parti);
-
-            }
+            Printer.PrintResults(t);
         }
     }
 }
